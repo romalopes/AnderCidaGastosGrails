@@ -1,0 +1,18 @@
+Projeto 
+1 - Primeira parte(fazendo funcionar em Grails)
+	Download do GGTS
+	Criação do Projeto Grails
+	Criação do Projeto
+	Criação dos objetos de domínio (create-domain-class)
+	Geração dos controles e view(generate-all *)
+	Bootstrap para algumas classes.
+2 - Colocar o Login com filter
+    Lembrando que depois usaremos o spring Security.
+	create-filters security (http://grails.org/doc/2.2.1/ref/Plug-ins/filters.html)
+	Criar a página login.jsp
+	Modificar o SecurityFilters.groovy
+	UrlMapping.groovy -> incluir "/"(controller: 'login', action: 'index')
+	Criar o login.gsp
+		Apontar para o css <link rel="stylesheet" href="${resource(dir: 'css', file: 'reset.css')}" type="text/css">
+		Modificar as tags do label/input/submit
+		
