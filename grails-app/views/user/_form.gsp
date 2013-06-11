@@ -7,7 +7,7 @@
 		<g:message code="user.userName.label" default="User Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="userName" maxlength="30" pattern="${userInstance.constraints.userName.matches}" required="" value="${userInstance?.userName}"/>
+	<g:field type="email" name="userName" maxlength="30" required="" value="${userInstance?.userName}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} ">

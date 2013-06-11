@@ -1,17 +1,23 @@
 package br.com.romalopes.andercidagastos
 
-class UserGroup {
+import java.io.Serializable;
 
-    String name
+class UserGroup implements Serializable{
+
+    String groupName
     User userOwner
     static hasMany=[user:User]
     static belongsTo=[user:User]
 
+    static mapping = {
+      version false
+      id column: 'groupName'
+    }
     static constraints = {
-      name(blank:false, nullable:false, size:3..30)
+      groupName(blank:false, unique:true, nullable:false, size:3..30)
     }
     
     String toString() {
-      return name
+      return groupName
     }
 }

@@ -65,6 +65,14 @@ form {
 	margin-top: 20px;
 }
 
+#errorMessage {
+	color: red;
+	display: inline-block;
+	margin-left: 18px;
+	padding-top: 10px;
+	font-size: 14px;
+}
+
 label {
 	color: #555;
 	display: inline-block;

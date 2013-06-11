@@ -12,21 +12,33 @@ class BootStrap {
     def init = { 
       
         servletContext ->
-          if(GrailsUtil.getEnvironment().equals("development"))
-          {
+        
+          Account account1 = Account.findByName('ContaTeste')
+          if(account1)
+            println account1
+          
+          println "Environment ---->" + GrailsUtil.getEnvironment()
+          //if(GrailsUtil.getEnvironment().equals("development") || GrailsUtil.getEnvironment().equals("developmentLocal") )
+          //{
+            if(User.findByUserName("romalopes@yahoo.com.br")) {
+              println("Valores ja existem")
+              return
+            }
     
-            User userAnderson = new User(userName:'romalopesTeste', password:'password', firstName:"PrimeiroNome", lastName:"UltimoNome")
+            User userAnderson = new User(userName:'romalopes@yahoo.com.br', password:'password', firstName:"PrimeiroNome", lastName:"UltimoNome")
             if (!userAnderson.save()){
               log.error "Could not save user!!"
-              log.error "${user.errors}"
+              log.error "${userAnderson.errors}"
             }
-            User userCida = new User(userName:'cydynhaTeste', password:'password', firstName:"PrimeiroNome", lastName:"UltimoNome")
+            log.info("${userAnderson} Salved")
+            
+            User userCida = new User(userName:'cydynha@msn.com', password:'password', firstName:"PrimeiroNome", lastName:"UltimoNome")
             if (!userCida.save()){
               log.error "Could not save user!!"
-              log.error "${user.errors}"
+              log.error "${userCida.errors}"
             }
         
-            UserGroup userGroup = new UserGroup(name: "GroupTest", userOwner: userAnderson )
+            UserGroup userGroup = new UserGroup(groupName: "GroupTest", userOwner: userAnderson )
             
             userGroup.addToUser(userAnderson)
             userGroup.addToUser(userCida)
@@ -60,7 +72,7 @@ class BootStrap {
               log.error "Could not save operation1!!"
               log.error "${account.errors}"
             }
-          }
+       //   }
           
           
     }

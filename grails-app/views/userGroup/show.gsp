@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list userGroup">
 			
-				<g:if test="${userGroupInstance?.name}">
+				<g:if test="${userGroupInstance?.groupName}">
 				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="userGroup.name.label" default="Name" /></span>
+					<span id="groupName-label" class="property-label"><g:message code="userGroup.groupName.label" default="Group Name" /></span>
 					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${userGroupInstance}" field="name"/></span>
+						<span class="property-value" aria-labelledby="groupName-label"><g:fieldValue bean="${userGroupInstance}" field="groupName"/></span>
 					
 				</li>
 				</g:if>

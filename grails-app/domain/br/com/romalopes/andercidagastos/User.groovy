@@ -1,6 +1,8 @@
 package br.com.romalopes.andercidagastos
 
-class User {
+import java.io.Serializable;
+
+class User implements Serializable{
 
     String userName
     String password
@@ -9,8 +11,13 @@ class User {
     static hasMany=[accounts:Account, userGroup:UserGroup, operation:Operation]
     static belongsTo = [accounts:Account, userGroup:UserGroup]
     
+    static mapping = {
+      version false
+      id column: 'userName'
+    }
+
     static constraints = {
-      userName(blank:false, nullable:false, size:3..30, matches:"[a-zA-Z1-9_]+")
+      userName(blank:false, email:true, nullable:false, size:3..30)
       password (password:true)
     }
     

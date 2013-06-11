@@ -6,7 +6,6 @@ class AccountController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-   
     def index() {
         redirect(action: "list", params: params)
     }
@@ -31,10 +30,14 @@ class AccountController {
         redirect(action: "show", id: accountInstance.id)
     }
 
-    def show(Long id) {
-        def accountInstance = Account.get(id)
+    def show(String name) {
+        String accountNumber = params.accountNumber
+        
+        println name + " " + params.acountNumber
+        println "params " + params
+        def accountInstance = Account.findByNameAndAccountNumber(name, accountNumber)
         if (!accountInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'account.label', default: 'Account'), id])
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'account.label', default: 'Account'), name])
             redirect(action: "list")
             return
         }

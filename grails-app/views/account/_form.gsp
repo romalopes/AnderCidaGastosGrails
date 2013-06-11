@@ -10,12 +10,12 @@
 	<g:textField name="name" maxlength="30" pattern="${accountInstance.constraints.name.matches}" required="" value="${accountInstance?.name}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'accountNumber', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'accountNumber', 'error')} required">
 	<label for="accountNumber">
 		<g:message code="account.accountNumber.label" default="Account Number" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="accountNumber" value="${accountInstance?.accountNumber}"/>
+	<g:field name="accountNumber" type="number" value="${accountInstance.accountNumber}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'balance', 'error')} required">

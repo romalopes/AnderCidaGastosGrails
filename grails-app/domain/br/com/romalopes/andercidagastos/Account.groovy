@@ -6,7 +6,7 @@ enum ACCOUNT_TYPE {
 }
 
 
-class Account {
+class Account implements Serializable{
 
     String name
     String accountNumber
@@ -15,8 +15,12 @@ class Account {
     static hasMany=[user:User]
     static belongsTo = [user:User]
     
-    
+    static mapping = {
+      version false
+      id composite: ['name', 'accountNumber']
+    }
     static constraints = {
+      //id(unique: ['name','accountNumber'])
       name(blank:false, nullable:false, size:3..30, matches:"[a-zA-Z1-9_]+")
     }
     

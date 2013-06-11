@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: userGroupInstance, field: 'name', 'error')} required">
-	<label for="name">
-		<g:message code="userGroup.name.label" default="Name" />
+<div class="fieldcontain ${hasErrors(bean: userGroupInstance, field: 'groupName', 'error')} required">
+	<label for="groupName">
+		<g:message code="userGroup.groupName.label" default="Group Name" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="name" maxlength="30" required="" value="${userGroupInstance?.name}"/>
+	<g:textField name="groupName" maxlength="30" required="" value="${userGroupInstance?.groupName}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: userGroupInstance, field: 'user', 'error')} ">

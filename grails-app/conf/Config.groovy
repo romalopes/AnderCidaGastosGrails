@@ -29,7 +29,7 @@ grails.mime.types = [
     xml:           ['text/xml', 'application/xml']
 ]
 
-// URL Mapping Cache Max Size, defaults to 5000
+// URL Mapping Cache .usernameMax Size, defaults to 5000
 //grails.urlmapping.cache.maxsize = 1000
 
 // What URL patterns should be processed by the resources plugin
@@ -59,9 +59,13 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+disable.auto.recompile=false
+grails.gsp.enable.reload=true
+
 environments {
     development {
         grails.logging.jul.usebridge = true
+        
     }
     production {
         grails.logging.jul.usebridge = false
@@ -88,4 +92,5 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+     debug 'br.com.romalopes.andercidagastos'
 }

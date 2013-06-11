@@ -24,7 +24,7 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="name" title="${message(code: 'userGroup.name.label', default: 'Name')}" />
+						<g:sortableColumn property="groupName" title="${message(code: 'userGroup.groupName.label', default: 'Group Name')}" />
 					
 						<th><g:message code="userGroup.userOwner.label" default="User Owner" /></th>
 					
@@ -34,7 +34,7 @@
 				<g:each in="${userGroupInstanceList}" status="i" var="userGroupInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${userGroupInstance.id}">${fieldValue(bean: userGroupInstance, field: "name")}</g:link></td>
+						<td><g:link action="show" id="${userGroupInstance.id}">${fieldValue(bean: userGroupInstance, field: "groupName")}</g:link></td>
 					
 						<td>${fieldValue(bean: userGroupInstance, field: "userOwner")}</td>
 					

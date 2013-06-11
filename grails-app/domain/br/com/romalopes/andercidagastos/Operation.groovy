@@ -1,7 +1,10 @@
 package br.com.romalopes.andercidagastos
 
-class Operation {
+import java.io.Serializable;
 
+class Operation implements Serializable{
+
+    int id
     String name
     Date date
     BigDecimal value
@@ -11,6 +14,7 @@ class Operation {
     Account account
     
     static constraints = {
+      id(unique:true, )
       value(blank:false, nullable: false)
       name(blank:false, nullable: false, size:3..80)
       category(nullable: false)
