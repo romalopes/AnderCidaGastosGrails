@@ -59,6 +59,11 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 
+grails.plugin.cloudfoundry.username = 'romalopes@yahoo.com.br'
+grails.plugin.cloudfoundry.password = 'anderson1'
+//grails.plugin.cloudfoundry.appname = 'my-cool-app'
+
+
 disable.auto.recompile=false
 grails.gsp.enable.reload=true
 
