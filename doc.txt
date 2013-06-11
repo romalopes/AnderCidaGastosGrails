@@ -15,4 +15,6 @@ Projeto
 	Criar o login.gsp
 		Apontar para o css <link rel="stylesheet" href="${resource(dir: 'css', file: 'reset.css')}" type="text/css">
 		Modificar as tags do label/input/submit
+3 - Colocando no Cloud Foundry
+	http://blog.swierczynski.net/2012/01/cloud-foundry-grails-lightning-fast-deployment/
 		
