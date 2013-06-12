@@ -18,7 +18,9 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><img src="${resource(dir: 'images', file: 'andercidagastos_logo.png')}" alt="Gastos"/></a></div>
+		<div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><img src="${resource(dir: 'images', file: 'andercidagastos_logo.png')}" alt="Gastos"/></a>
+			<g:message code="default.andercidaGastos" default="AnderCida Gastos"/>
+		</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

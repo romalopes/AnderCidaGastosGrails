@@ -18,7 +18,7 @@ class User implements Serializable{
 
     static constraints = {
       userName(blank:false, email:true, nullable:false, size:3..30)
-      password (password:true)
+      password (display: false, password:true)
     }
     
     String toString() {

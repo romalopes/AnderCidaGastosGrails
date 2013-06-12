@@ -3,12 +3,26 @@ package br.com.romalopes.andercidagastos
 class LoginController {
 
     def index() {
-      println "index"
-      render(view: "login")
+       if(session.user) 
+      {
+        redirect(controller:"main")
+        //render(view: "/main")
+      }
+      else 
+      {
+        render(view: "login")
+      }
     }
     
     def login() {
       println "login"
+      
+      if(session.user) 
+      {
+        //render(view: "/main")
+        redirect(controller:"main")
+        return
+      }
       if(!params.username)
       {
         render(view: "login")
@@ -18,14 +32,15 @@ class LoginController {
       User user = User.findByUserName(params.username)
       
       if (user) {
-        log.warn("Usuario encontrado %{user.userName}")
+        log.info("Usuario encontrado %{user.userName}")
         if(user.password && user.password.equals(params.password)) {
-          session.user = params.username
-          render(view: "/main")
+          session.user = user
+          redirect(controller:"main")
+          //render(view: "/main")
           return
         }
       }
-      render(view: "login", model: [message: "Password or user do not match"])
+      render(view: "login", model: [message: "The username or password is invalid or the account is not active."])
     }
     
     def logout () {

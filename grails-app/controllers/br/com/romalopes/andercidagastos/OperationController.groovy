@@ -7,6 +7,7 @@ class OperationController {
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
+      println "params: $params"
         redirect(action: "list", params: params)
     }
 

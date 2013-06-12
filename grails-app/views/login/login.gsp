@@ -10,11 +10,9 @@
 	<title>Login</title>
 
 	<!-- CSS -->
-	
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'reset.css')}" type="text/css">
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'animate.css')}" type="text/css">
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'styles.css')}" type="text/css">
-	
 </head>
 
 	<!-- Main HTML -->
