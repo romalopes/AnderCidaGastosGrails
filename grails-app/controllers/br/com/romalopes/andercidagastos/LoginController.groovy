@@ -52,14 +52,17 @@ class LoginController {
         if(cookieFound || user.password && user.password.equals(params.password)) {
           session.user = user
 		  
-		  String uuid = UUID.randomUUID().toString();
-		  println "uuid $uuid"
-		  Cookie c = new Cookie("user", user.userName);
-//		  c.setSecure(true);
-		  c.setMaxAge(365 * 24 * 60 * 60); // one year
-		  response.addCookie(c);
-		  println "Cookie ${c} " + cookie.value
-		  
+//		  String uuid = UUID.randomUUID().toString();
+//		  println "uuid $uuid"
+		  String keepLoggedIn = params.keepLoggedIn
+		  if(keepLoggedIn.equals("on"))
+		  {
+			  Cookie c = new Cookie("user", user.userName);
+	//		  c.setSecure(true);
+			  c.setMaxAge(365 * 24 * 60 * 60); // one year
+			  response.addCookie(c);
+			  println "Cookie ${c} " + cookie.value
+		  }		  
           redirect(controller:"main")
           //render(view: "/main")
           return

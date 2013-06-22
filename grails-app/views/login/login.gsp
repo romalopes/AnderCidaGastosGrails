@@ -37,7 +37,7 @@
 			<g:passwordField name="password" />
 			<div id="lower">
 			
-			<g:field type="checkBox" name="keepLoggedIn" /><label class="check" for="checkbox">Keep me logged in</label>
+			<g:checkBox name="keepLoggedIn" /><label class="check" for="checkbox">Keep me logged in</label>
 						
 			<g:actionSubmit action="login" value="login" />
 			<%--<input type="submit" value="Login">--%>

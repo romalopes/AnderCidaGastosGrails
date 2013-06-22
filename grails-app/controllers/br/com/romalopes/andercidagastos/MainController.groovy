@@ -20,10 +20,6 @@ class MainController {
         println opList;
         model = [operationInstanceList: opList, operationInstanceTotal: opList.size(), specificCategoryList:specificCategoryList]
       }
-	  def userList = User.list()
-	  println "userList $userList"
-
-      model << [userList:userList]
       render(view:"/main", model:model)
     }
     
