@@ -17,7 +17,6 @@ class SpecificCategory implements Serializable{
     }
 
     static constraints = {
-      
       name(blank:false, unique:true, nullable:false, size:3..30, matches:"[a-zA-Z1-9_]+")
     }
     

@@ -28,11 +28,11 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'operation.name.label', default: 'Name')}" />
 					
+						<g:sortableColumn property="date" title="${message(code: 'operation.date.label', default: 'Date')}" />
+					
 						<th><g:message code="operation.category.label" default="Category" /></th>
 					
 						<th><g:message code="operation.user.label" default="User" /></th>
-					
-						<th><g:message code="operation.userGroup.label" default="User Group" /></th>
 					
 						<th><g:message code="operation.account.label" default="Account" /></th>
 					
@@ -46,11 +46,11 @@
 					
 						<td>${fieldValue(bean: operationInstance, field: "name")}</td>
 					
+						<td><g:formatDate date="${operationInstance.date}" /></td>
+					
 						<td>${fieldValue(bean: operationInstance, field: "category")}</td>
 					
 						<td>${fieldValue(bean: operationInstance, field: "user")}</td>
-					
-						<td>${fieldValue(bean: operationInstance, field: "userGroup")}</td>
 					
 						<td>${fieldValue(bean: operationInstance, field: "account")}</td>
 					

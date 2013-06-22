@@ -14,6 +14,8 @@ class User implements Serializable{
     static mapping = {
       version false
       id column: 'userName'
+      accounts lazy: false
+      operation lazy: false
     }
 
     static constraints = {

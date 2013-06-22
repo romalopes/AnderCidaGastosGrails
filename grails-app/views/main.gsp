@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <html itemscope="itemscope" itemtype="http://schema.org/WebPage"><head>
 <!-- Title -->
   <title>AnderCida Gastos</title>
@@ -99,7 +102,7 @@
 			<div>
 				<div>
 					<g:def var="hasUser" value="${(session?.user) ? 'true' : 'false'}" />
-					<g:if test="${!session.user}">
+					<g:if test="${session.user}">
 						<div class="welcome">Welcome ${session?.user}</div>
 					</g:if>
 					<g:if test="${!session?.user}">

@@ -13,9 +13,9 @@ class BootStrap {
       
         servletContext ->
         
-          Account account1 = Account.findByName('ContaTeste')
-          if(account1)
-            println account1
+          Account account2 = Account.findByName('ContaTeste')
+          if(account2)
+            println account2
           
           println "Environment ---->" + GrailsUtil.getEnvironment()
           //if(GrailsUtil.getEnvironment().equals("development") || GrailsUtil.getEnvironment().equals("developmentLocal") )
@@ -55,11 +55,20 @@ class BootStrap {
               log.error "Could not save account!!"
               log.error "${account.errors}"
             }
-            
+
+			Account account1 = new Account(name: "ContaTeste1", typeAccount: ACCOUNT_TYPE.DEBT, accountNumber: 'NumeroConta1' )
+			account1.balance = 1500
+			account1.addToUser(userAnderson)
+			account1.addToUser(userCida)
+			if (!account1.save()){
+			  log.error "Could not save account!!"
+			  log.error "${account1.errors}"
+			}
+
             SpecificCategory categoryPai = new SpecificCategory(name: "categoriaPaiTeste")
             if (!categoryPai.save()){
               log.error "Could not save categoryPai!!"
-              log.error "${account.errors}"
+              log.error "${categoryPai.errors}"
             }
             SpecificCategory categoryFilha = new SpecificCategory(name: "categoriaFilhaTeste", categoryFather:categoryPai)
             if (!categoryFilha.save()){
@@ -70,7 +79,7 @@ class BootStrap {
       
             if (!operation1.save()){
               log.error "Could not save operation1!!"
-              log.error "${account.errors}"
+              log.error "${operation1.errors}"
             }
        //   }
           

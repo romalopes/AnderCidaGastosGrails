@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${operationInstance?.date}">
+				<li class="fieldcontain">
+					<span id="date-label" class="property-label"><g:message code="operation.date.label" default="Date" /></span>
+					
+						<span class="property-value" aria-labelledby="date-label"><g:formatDate date="${operationInstance?.date}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${operationInstance?.category}">
 				<li class="fieldcontain">
 					<span id="category-label" class="property-label"><g:message code="operation.category.label" default="Category" /></span>
@@ -59,29 +68,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${operationInstance?.userGroup}">
-				<li class="fieldcontain">
-					<span id="userGroup-label" class="property-label"><g:message code="operation.userGroup.label" default="User Group" /></span>
-					
-						<span class="property-value" aria-labelledby="userGroup-label"><g:link controller="userGroup" action="show" id="${operationInstance?.userGroup?.id}">${operationInstance?.userGroup?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${operationInstance?.account}">
 				<li class="fieldcontain">
 					<span id="account-label" class="property-label"><g:message code="operation.account.label" default="Account" /></span>
 					
 						<span class="property-value" aria-labelledby="account-label"><g:link controller="account" action="show" id="${operationInstance?.account?.id}">${operationInstance?.account?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${operationInstance?.date}">
-				<li class="fieldcontain">
-					<span id="date-label" class="property-label"><g:message code="operation.date.label" default="Date" /></span>
-					
-						<span class="property-value" aria-labelledby="date-label"><g:formatDate date="${operationInstance?.date}" /></span>
 					
 				</li>
 				</g:if>

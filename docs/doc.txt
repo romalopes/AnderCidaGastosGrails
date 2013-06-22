@@ -29,9 +29,10 @@
  # 	Modificar o SecurityFilters.groovy
  # 	UrlMapping.groovy -> incluir "/login"(controller: 'login', action: 'index') incluir "/"(controller: "main", action:"index")
  # 	Criar o login.gsp
-  # 		Apontar para o css <link rel="stylesheet" href="${resource(dir: 'css', file: 'reset.css')}" type="text/css">
-  # 		Modificar as tags do label/input/submit
-  # 		Modificar o loging
+  # Apontar para o css <link rel="stylesheet" href="${resource(dir: 'css', file: 'reset.css')}" type="text/css">
+  # Modificar as tags do label/input/submit
+  # Modificar o loging
+  # Keep logged in using cookie
 ++ Ligações e Como executar
 # Formas para Executar
  # 	prod run-app
@@ -53,6 +54,11 @@
  # 	prod cf-push
  # 	prod cf-update
  # 	[*http://AnderCidaGastos.cloudfoundry.com]
+# Criação da página inicial
+ # Criação do Controller
+ # Criação das ações para a seleção da Conta e inclusão de Operação
+ # install-template para criar o web.xml
+ # 
 
 
 ------

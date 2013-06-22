@@ -1,6 +1,5 @@
 package br.com.romalopes.andercidagastos
 
-
 enum ACCOUNT_TYPE {
   SAVINGS, DEBT, CREDIT
 }
@@ -27,4 +26,5 @@ class Account implements Serializable{
     String toString() {
       return name + " " + accountNumber
     }
+    
 }

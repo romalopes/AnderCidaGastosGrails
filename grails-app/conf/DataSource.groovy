@@ -13,7 +13,7 @@ hibernate {
 environments {
     developmentLocal {
         dataSource {
-            dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
+            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             //dbCreate = 'update'
   //          url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
           driverClassName = 'org.h2.Driver'

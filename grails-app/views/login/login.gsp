@@ -28,22 +28,22 @@
 		<g:form controller="login" action="login" method="post" ><%-- <form>--%>
 
 	
-		<label for="name" >Username:</label>
-		<%--<g:textField name="username" value="romalopesTeste" />--%><input type="name" name="username" value="romalopes@yahoo.com.br" placeholder="Username or Email"> 
-		<label for="username">Password:</label>
-		<p><a href="#">Forgot your password?</a>
-		
-		<%--<input type="password" placeholder="password"> --%> 
-		<g:passwordField name="password" />
-		<div id="lower">
-		
-		<input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
-		
-		<g:actionSubmit action="login" value="login" />
-		<%--<input type="submit" value="Login">--%>
-		
-		</div>
-		
+			<label for="name" >Username:</label>
+			<%--<g:textField name="username" value="romalopesTeste" />--%><input type="name" name="username" value="<g:cookie name="userName"/>" placeholder="Username or Email"> 
+			<label for="username">Password:</label>
+			<p><a href="#">Forgot your password?</a>
+			
+			<%--<input type="password" placeholder="password"> --%> 
+			<g:passwordField name="password" />
+			<div id="lower">
+			
+			<g:field type="checkBox" name="keepLoggedIn" /><label class="check" for="checkbox">Keep me logged in</label>
+						
+			<g:actionSubmit action="login" value="login" />
+			<%--<input type="submit" value="Login">--%>
+			
+			</div>
+			
 		</g:form><%--</form> --%>
 		
 	</div>

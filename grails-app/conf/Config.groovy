@@ -64,7 +64,8 @@ grails.plugin.cloudfoundry.password = 'anderson1'
 //grails.plugin.cloudfoundry.appname = 'my-cool-app'
 
 
-disable.auto.recompile=false
+//disable.auto.recompile=false
+enable.auto.recompile=true
 grails.gsp.enable.reload=true
 
 environments {
