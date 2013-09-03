@@ -1,8 +1,6 @@
 <g:javascript>
 function accountUpdated(data) {
-	window.location.reload()
-	 $('#list-operation').hide();
-     $('#list-operation').show();
+	
 }
 
 </g:javascript>
@@ -57,6 +55,7 @@ function accountUpdated(data) {
             						action:'changeAccount', 
 			                        params: '\'account=\' + this.value',
 								    options: '[asynchronous: false]',
+									update: [success:'list-operation'],	
 									onSuccess:'accountUpdated(data)')}">
 	    				</g:select>
 					</g:form>

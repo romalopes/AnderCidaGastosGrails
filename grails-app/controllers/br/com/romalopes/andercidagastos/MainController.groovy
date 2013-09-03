@@ -35,8 +35,15 @@ class MainController {
         return;
       }
       session.account = Account.findByName(params.account)
-      
-	  render(view:"/main", model:[:])
+
+	  Map model = [:]
+	  List opList = Operation.findAllWhere(account: session.account);
+	  println opList;
+	  model = [operationInstanceList: opList, operationInstanceTotal: opList.size()]
+	  
+	  //render(template: "/templates/PI/tabelaPI", model:map)
+	  return model
+	  //render(view:"/main", model:[:])
       //redirect(action:"index")
     }
     
@@ -51,6 +58,7 @@ class MainController {
 	  
 	  redirect(action:"index")
 	  //render(view:"/main")
+	  //
 
     }
 	def populateUsers() {

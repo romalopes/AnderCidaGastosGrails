@@ -1,0 +1,39 @@
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACCOUNT_USER" not found; SQL statement:
+alter table account_user drop constraint FK410E6E9D4F4D84C0 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ACCOUNT_USER" not found; SQL statement:
+alter table account_user drop constraint FK410E6E9DFDA2DF31 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "OPERATION" not found; SQL statement:
+alter table operation drop constraint FK631AD5674F4D84C0 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "OPERATION" not found; SQL statement:
+alter table operation drop constraint FK631AD567FDA2DF31 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "OPERATION" not found; SQL statement:
+alter table operation drop constraint FK631AD56746221F23 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "SPECIFIC_CATEGORY" not found; SQL statement:
+alter table specific_category drop constraint FK2F973D6B7912404 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER_ACCOUNTS" not found; SQL statement:
+alter table user_accounts drop constraint FK83A115DA4F4D84C0 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER_ACCOUNTS" not found; SQL statement:
+alter table user_accounts drop constraint FK83A115DAFDA2DF31 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER_GROUP" not found; SQL statement:
+alter table user_group drop constraint FK72A9010B6C8CE93D [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER_GROUP_USER" not found; SQL statement:
+alter table user_group_user drop constraint FK9C06927FFDA2DF31 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER_GROUP_USER" not found; SQL statement:
+alter table user_group_user drop constraint FK9C06927F813B4B4C [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER_USER_GROUP" not found; SQL statement:
+alter table user_user_group drop constraint FKC23DADFFFDA2DF31 [42102-164]
+06-20 20:14:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER_USER_GROUP" not found; SQL statement:
+alter table user_user_group drop constraint FKC23DADFFC62E7298 [42102-164]

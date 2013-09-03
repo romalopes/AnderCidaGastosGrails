@@ -18,7 +18,9 @@
 </div>
 
 <div class="listOperations">
+	
 	<div id="list-operation" class="content scaffold-list" role="main">
+		<g:message code="Test.ListOperations" defult="test listOperations"/>
 		<h1><g:message code="default.OperationList.label" default="Operation List"  /></h1>
 		<g:if test="${flash.message}">
 		<div class="message" role="status">${flash.message}</div>
@@ -36,6 +38,7 @@
 				</tr>
 			</thead>
 			<tbody>
+			<g:if test="${operationInstanceList  == null}"> Print </g:if>
 			<g:each in="${operationInstanceList}" status="i" var="operationInstance">
 				<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					<td><g:link action="show" id="${operationInstance.id}">${fieldValue(bean: operationInstance, field: "value")}</g:link></td>
