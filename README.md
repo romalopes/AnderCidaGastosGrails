@@ -4,3 +4,65 @@ AnderCidaGastosGrails
 Gastos do Anderson e da Cida em Grails
 
 Versão 1
+
+Passos do Projeto
+
+Primeira parte(fazendo funcionar em Grails)
+
+Download do GGTS
+Criação do Projeto Grails
+Criação do Projeto
+Inclusão no GitHub
+Criação do repositório
+pelo site:https://help.github.com/articles/create-a-repo
+OU pelo programa GitHug instalado: Basta copiar para a área de trabalho.
+Jogar para o github
+AndercidaGastosGrails on Github is [https://github.com/romalopes/AnderCidaGastosGrasil ]
+Criação dos Objetos
+
+Criação dos objetos de domínio (create-domain-class)
+Fazer os relacionamentos e os IDs
+[http://grails.org/doc/2.2.1/ref/Database%20Mapping/id.html]
+[http://forum.springsource.org/showthread.php?102700-Composite-Ids-problem]
+Geração dos controles e view(generate-all *)
+Bootstrap para algumas classes.
+Criação do login
+
+Colocar o Login com filter
+Lembrando que depois usaremos o spring Security.
+create-filters security ([http://grails.org/doc/2.2.1/ref/Plug-ins/filters.html])
+Criar a página login.jsp
+Modificar o SecurityFilters.groovy
+UrlMapping.groovy -> incluir "/login"(controller: 'login', action: 'index') incluir "/"(controller: "main", action:"index")
+Criar o login.gsp
+Apontar para o css <link rel="stylesheet" href="${resource(dir: 'css', file: 'reset.css')}" type="text/css">
+Modificar as tags do label/input/submit
+Modificar o loging
+Keep logged in using cookie
+Ligações e Como executar
+
+Formas para Executar
+prod run-app
+-Dgrails.env=developmentLocal run-app
+Ligar com o MySql
+Ligar o serviço do MySql
+Modificar o dataSource.groovy
+Criar ambientes local(HSSqlDB) e development(MySql)
+Configurar o ambiente
+Apontar para o Conector JDBC //no Config.groovy
+[http://learnedstuffs.wordpress.com/2012/02/21/using-mysql-as-database-in-grails/]
+[http://www.redtoad.ca/ataylor/2011/06/getting-started-with-grails-and-mysql/]
+Apontando para um banco de dados na Nuvem
+Achei um gratis: [http://www.freemysqlhosting.net/account/]
+Criação do BD e modificação do dataSource.groovy para o ambiente de produção.
+Colocando no Cloud Foundry
+[http://blog.swierczynski.net/2012/01/cloud-foundry-grails-lightning-fast-deployment/]
+[http://blog.springsource.org/2011/04/12/one-step-deployment-with-grails-and-cloud-foundry/]
+prod cf-push
+prod cf-update
+[http://AnderCidaGastos.cloudfoundry.com]
+Criação da página inicial
+Criação do Controller
+Criação das ações para a seleção da Conta e inclusão de Operação
+install-template para criar o web.xml
+
